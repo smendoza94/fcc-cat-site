@@ -42,8 +42,13 @@
             <form action="https://freecatphotoapp.com/submit-cat-photo"></form>
            <!-- wrapping label tag around input radio includes the inner text for submission -->
            <!-- radio buttons with the same "name" attribute can only be selected on at a time -->
-           <label><input id="indoor" name="indoor-outdoor" type="radio"> Indoor</label>
-           <label><input id="outdoor" name="indoor-outdoor" type="radio"> Outdoor</label>
+           <!-- values attribute allow submition to overwrite default "on" values to desired values -->
+           <!-- group related field inputs into fieldsets for "block-level element" organization -->
+           <fieldset> 
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+               <label><input id="indoor" name="indoor-outdoor" value="indoor" type="radio"> Indoor</label>
+               <label><input id="outdoor" name="indoor-outdoor" value="outdoor" type="radio"> Outdoor</label>
+           </fieldset>
             <input required type="text" name="catphotourl" placeholder="cat photo url">
             <button type="submit">Submit</button>
         </section>
